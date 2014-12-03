@@ -1,0 +1,7 @@
+  .wf-button {
+  	@include button($bg:$aluminum,$radius:true);
+	  	&.large  { @include button-size($padding:$button-lrg); }
+	    &.small  { @include button-size($padding:$button-sml); }
+	    &.tiny   { @include button-size($padding:$button-tny); }
+	    &.expand { @include button-size($padding:null,$full-width:true); }
+}

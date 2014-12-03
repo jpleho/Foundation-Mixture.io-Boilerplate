@@ -1,0 +1,46 @@
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-item {
+  max-width: 50%;
+}
+
+.align-item--top {
+  align-self: flex-start;
+}
+
+.align-item--bottom {
+  align-self: flex-end;
+}
+
+.f-dropdown:focus { 
+	outline: 0; 
+}
+
+.panel.mid {
+	min-height: 100px;
+}
+
+.panel.large {
+	min-height: 150px;
+}
+
+.panel.xl {
+	min-height: 250px;
+}
+
+.content-section {
+border-style: solid;
+border-width: 1px;
+border-color: #D8D8D8;
+margin-bottom: 1.25rem;
+padding: 1.25rem;
+}
+
+.content-section h3 {
+	text-align: center;
+	margin-bottom: 20px;
+}

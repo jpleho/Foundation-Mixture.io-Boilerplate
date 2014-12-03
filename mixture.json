@@ -1,0 +1,32 @@
+{
+  "convertHtml": {
+    "relativePaths": false
+  },
+  "debug": false,
+  "domain": null,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": [
+    "bower_components/foundation/scss",
+    "assets/scss",
+    "assets"
+  ],
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "assets/css",
+  "projectDescription": "UXP Boilerplate for prototyping. Based on Foundation 5",
+  "projectName": "Boilerplate",
+  "password": null,
+  "optimiseImages": true,
+  "publishedId": null,
+  "sass": {
+    "useLibSass": true
+  },
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false
+}
