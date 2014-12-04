@@ -44,3 +44,17 @@ padding: 1.25rem;
 	text-align: center;
 	margin-bottom: 20px;
 }
+
+/*SideNav*/
+
+.nav-side .nav-list .subnav-list {
+  display: none;
+}
+
+.nav-side .current-page > a {
+  background-color: #333;
+}
+
+.js-subnav-toggle {
+  background-color: #f0f0f0;
+}
