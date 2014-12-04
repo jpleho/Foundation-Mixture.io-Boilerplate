@@ -4,6 +4,7 @@ $(document).ready( function() {
     { label: 'Operations',
       icon: 'fa-camera-retro',
       href: '/operations',
+      caret_html: '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-down"></i>',
       children: [
         { id: 'ready-to-pick', //not mandatory, used only if you want to explicitly set item as active
           label: 'Ready to pick',
@@ -26,7 +27,7 @@ $(document).ready( function() {
   ];
 
   var SideNav = {
-    target: $('.nav'), //set to element where you want to attach the nav
+    target: $('.nav-test'), //set to element where you want to attach the nav
     items: side_nav_items,
     html: '',
     attach_events: function(){
@@ -36,6 +37,8 @@ $(document).ready( function() {
       e.preventDefault();
 
       var $item = $(this).is('span') ? $(this).parent() : $(this);
+
+      $item.parent().toggleClass('open');
       $item.next('.subnav-list').slideToggle();
     },
     set_active: function(){
@@ -43,7 +46,7 @@ $(document).ready( function() {
         $('.nav-side').find('[href="' + window.location.pathname + '"]').parent().addClass('current-page');
       }
       $('.current-page').parents('.subnav-list').css('display', 'block');
-      $('.current-page').parents('.has-children').addClass('current-page-ancestor');
+      $('.current-page').parents('.has-children').addClass('current-page-ancestor open');
     },
     init: function(){
       console.log('Nav init');
@@ -76,17 +79,18 @@ $(document).ready( function() {
       var link_class = (has_children && item.href === '#') ? 'js-subnav-toggle' : '';
       var item_html = '<li class="' + has_children_class + active_class + '">';
 
-        item_html += '<a class="' + link_class + '" href="' + item.href + '">';
+        item_html += '<a class="nav-side__item ' + link_class + '" href="' + item.href + '">';
 
         if (item.icon){
-          item_html += '<i class="fa ' + item.icon + '"></i>';
+          item_html += '<i class="nav-side__item__icon fa ' + item.icon + '"></i>';
         }
 
         item_html += item.label;
 
         if (has_children){
           var subnav_toggle_class = item.href !== '#' ? 'js-subnav-toggle' : '';
-          item_html += ' <span class="' + subnav_toggle_class + '"><i class="fa fa-caret-down"></i></span>';
+          var caret_html = item.caret_html ? item.caret_html : '<i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i>';
+          item_html += ' <span class="nav-side__item__toggle ' + subnav_toggle_class + '">' + caret_html + '</span>';
         }
 
         item_html += '</a>';

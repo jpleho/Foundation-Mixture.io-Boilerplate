@@ -8,7 +8,8 @@
   "modelSource": null,
   "preprocessorLocations": [
     "bower_components/foundation/scss",
-    "assets"
+    "assets/js",
+    "assets/css"
   ],
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
