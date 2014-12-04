@@ -1,0 +1,29 @@
+{% layout "docs_layout" %}
+{% block title %}Boilerplate Docs{% endblock %}
+{% block content %}
+
+<div class="row">
+	<div class="small-12 medium-2 large-2 columns">
+	<button class="button expand" onclick="goBack()"> < Back</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="medium-12 columns">
+		{% for izlet in global.izleti %}
+			
+				{% if izlet.name == {{request.query.izlet_name}} %}
+					<h1>{{ izlet.name }}</h1>
+					<h3>{{ izlet.price }} kuna</h3>
+					<p>{{ izlet.description }}</p>
+				{% endif %}
+			
+			{% endfor %}
+	</div>
+</div>
+
+
+
+
+
+{% endblock %}

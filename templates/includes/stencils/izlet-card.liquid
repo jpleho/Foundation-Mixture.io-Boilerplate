@@ -1,5 +1,5 @@
 	
-{% for content in global.content limit:1 %}
+<!-- {% for content in global.content limit:1%}
 
 	<div class="content-section">
 	  <h3 class="subheader">{{ content.header }}</h3>
@@ -15,8 +15,32 @@
 			</div>
 		</div>
 	</div>
+{% endfor %} -->
+
+
+{% for izlet in global.izleti %}		
+<div class="medium-4 small-6 columns">
+<a href="/docs/advanced/izlet?izlet_name={{ izlet.name }}">
+		<img src="http://placehold.it/500x500&amp;text=[img]">
+		<div class="panel">
+			<h5>{{izlet.name}}</h5>
+			<h6 class="subheader">{{izlet.price}} kn</h6>
+		</div>
+	</a>
+</div>
 {% endfor %}
 
+
+<!-- <li>
+	<a href="/country?country_name={{ country-card.name }}">
+  	<div class="panel radius">
+  	<img src="http://placehold.it/768x400&amp;text={{ country-card.name }}">
+  	&nbsp
+     <h3>{{ country-card.name }}</h3>
+     <p class="description">{{ country-card.description }}</p>
+	</div>
+	</a>
+</li> -->
 
 
 <!-- 		# array = [1,2,3,4,5,6]

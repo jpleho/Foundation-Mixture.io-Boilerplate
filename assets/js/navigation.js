@@ -3,7 +3,7 @@ $(document).ready( function() {
   var side_nav_items = [
     { label: 'Operations',
       icon: 'fa-camera-retro',
-      href: '/operations',
+      href: '#',
       caret_html: '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-down"></i>',
       children: [
         { id: 'ready-to-pick', //not mandatory, used only if you want to explicitly set item as active
