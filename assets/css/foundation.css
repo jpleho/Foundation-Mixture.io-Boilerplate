@@ -6014,6 +6014,21 @@ th.hide-for-touch {
     padding-left: 0;
     width: 100%; }
 
+.fullWidth {
+  margin-top: -550px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  margin-left: 230px; }
+
+.docs-sidebar {
+  width: 230px;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial; }
+
 .flex-align {
   display: flex;
   align-items: center;

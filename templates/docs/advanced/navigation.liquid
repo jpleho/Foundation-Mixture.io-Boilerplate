@@ -7,5 +7,16 @@
 <!-- Otherwise active item gets set based on URL  -->
 
 <div class="nav-test"></div>
+<div class="row">
 
+	<p>Za prikaz sidebar navigacije koristi se navigation.js file. Navigaciju treba složiti u layout da odgovara veličinom. Pri tome se koristi style.scss file. A podaci u navigaciji se mijenjaju u navigation.js file na sličan način kao i JSON file.</p>
+	<p>Stranica koja koristi sidebar navigaciju mora imati includanu tu skriptu.</p>
+	<p>Da bi stranica prikazala tu navigaciju u DIV se mora ubaciti naziv klase od te navigacije (definira se u .js fileu). U ovom slučaju je to "nav-test".</p>
+	<p>Da bi navigacija bila sticky trebamo koristiti jquery.sticky.js ( $("#sticky").sticky({topSpacing:50}); ). Primjer je u scripts.liquidu.</p>
+
+</div>
+
+{% endblock %}
+{% block script %}
+<script src="/assets/js/navigation.js"></script>
 {% endblock %}

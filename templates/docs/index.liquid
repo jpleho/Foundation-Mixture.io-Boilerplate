@@ -2,6 +2,11 @@
 {% block title %}Boilerplate Docs{% endblock %}
 {% block content %}
 
+<div class="docs-sidebar" id="sticky-nav"></div>
+
+<div class="row fullWidth">
+	<div class="medium-12 columns">
+
 <br>
 <div class="row">
 	<h3 id="typography">Typography</h3>
@@ -655,10 +660,32 @@
 </div>
 <br>
 <div class="row">
-	<h3>Buttons</h3>
+	<h3 id="content_stencils">Content stencils</h3>
 	<hr>
+	<p>Koristi content.liquid include. Iterira kroz JSON. Sa limit:x i offset: x mozes upravljati koje podatke prikazuje.</p>
 	<div class="medium-8 columns">
+	{% include "stencils/content"%}
 	</div>
 </div>
 
+<div class="row">
+	<h3 id="izleti">Izleti</h3>
+	<hr>
+	<p>Koristi izlet-card include te posebnu izlet.liquid stranicu koja predstavlja pojedini izlet.</p>
+	<div class="medium-8 columns">
+	{% include "stencils/izlet-card"%}
+	</div>
+</div>
+
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="/assets/js/docs_sidebar.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#sticky-nav").sticky({topSpacing:50});
+  });
+</script>
 {% endblock %}
